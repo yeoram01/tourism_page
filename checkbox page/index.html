@@ -21,6 +21,10 @@
             const form = document.querySelector("form");
             form.addEventListener("submit", validateForm);
             });
+        function redirectToNextPage() {
+            // 버튼 클릭 시 이동할 페이지를 설정
+            window.location.href = "https://yeoram01.github.io/tourism_page/checkbox%20page/submit.html";
+        }
     </script>
 </head>
 <body>
@@ -29,7 +33,7 @@
         제주도의 지속가능한 관광을 위해, 아래 체크리스트를 실천해주세요!<br>
         체크리스트를 모두 완료하면, 모바일 인증서가 발급됩니다.</h5>
     
-    <form action="submit.html" method="GET">
+    <form>
         <label>
             <input type="checkbox" name="option1" value="option1">
             일회용품 어매니티(클렌징 세트, 슬리퍼) 사용 최소화하기
@@ -59,7 +63,7 @@
             에어컨/난방 적정 온도 유지하기
         </label>
         <br>
-        <button type="submit">환경 지키기 성공!</button>
+        <button type="button" onclick="redirectToNextPage()">환경 지키기 성공!</button>
     </form>
 </body>
 </html>
