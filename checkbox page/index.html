@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,15 +8,17 @@
     <script>
         // 폼 검증 함수
         function validateForm(event) {
-            event.preventDefault(); // 폼 기본 동작 방지
+            // 기본 제출 방지
+            event.preventDefault();
+
             const checkboxes = document.querySelectorAll('input[type="checkbox"]');
             const allChecked = Array.from(checkboxes).every(checkbox => checkbox.checked);
 
             if (!allChecked) {
+                // 모든 항목이 체크되지 않았을 경우 알림
                 alert("모든 항목을 체크해야 제출할 수 있습니다.");
-                event.preventDefault(); // 폼 제출 방지
             } else {
-                // 모든 체크박스가 체크되었을 경우 다음 페이지로 이동
+                // 모든 항목이 체크되었을 경우 페이지 이동
                 window.location.href = "https://yeoram01.github.io/tourism_page/checkbox%20page/submit.html";
             }
         }
