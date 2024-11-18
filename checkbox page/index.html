@@ -9,6 +9,7 @@
     <script>
         // 폼 검증 함수
         function validateForm(event) {
+            event.preventDefault(); // 폼 기본 동작 방지
             const checkboxes = document.querySelectorAll('input[type="checkbox"]');
             const allChecked = Array.from(checkboxes).every(checkbox => checkbox.checked);
 
@@ -17,7 +18,7 @@
                 event.preventDefault(); // 폼 제출 방지
             } else {
                 // 모든 체크박스가 체크되었을 경우 다음 페이지로 이동
-                window.location.href = "https://yeoram01.github.io/tourism_page/checkbox-page/submit.html";
+                window.location.href = "https://yeoram01.github.io/tourism_page/checkbox%20page/submit.html";
             }
         }
 
@@ -64,7 +65,7 @@
             에어컨/난방 적정 온도 유지하기
         </label>
         <br>
-        <button type="submit" onclick="redirectToNextPage()">환경 지키기 성공!</button>
+        <button type="submit">환경 지키기 성공!</button>
     </form>
 </body>
 </html>
